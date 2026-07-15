@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ | Vyrelora by Alina Kulakova</title>
+<meta name="description" content="Answers to common questions about Vyrelora visualization courses, the method, access, refunds and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<nav class="site" id="nav">
+  <a href="index.html" class="logo"><span class="name">VYRE<span>LORA</span></span><span class="by">by Alina Kulakova</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Alina</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="method.html">The Method</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="faq.html" class="active">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="courses.html" class="btn btn-primary btn-sm">Start Your Journey</a>
+</nav>
+
+<header class="page-hero">
+  <div class="blob b-lav"></div><div class="blob b-gold" style="left:-140px"></div>
+  <div class="container">
+    <div class="eyebrow center reveal">FAQ</div>
+    <h1 class="reveal">Questions,<br><em style="color:var(--gold)">answered gently.</em></h1>
+  </div>
+</header>
+
+<section class="section" style="padding-top:10px">
+  <div class="container">
+    <div class="faq">
+      <div class="q reveal"><button onclick="toggleFaq(this)"><span>What is visualization?</span><span class="plus">+</span></button><div class="a"><p>Visualization is the practice of intentionally creating a mental image of a desired experience, outcome, identity, or future. In the Vyrelora Method, visualization is combined with emotional connection, self-reflection, belief development, and intentional action.</p></div></div>
+      <div class="q reveal"><button onclick="toggleFaq(this)"><span>Is Vyrelora based only on manifestation?</span><span class="plus">+</span></button><div class="a"><p>Vyrelora focuses on visualization as a personal-development practice. The method does not suggest that thinking alone guarantees a particular result. Visualization is used to improve clarity, focus, emotional connection, confidence, and intentional behavior.</p></div></div>
+      <div class="q reveal"><button onclick="toggleFaq(this)"><span>Do I need previous experience?</span><span class="plus">+</span></button><div class="a"><p>No. Vyrelora courses are designed for beginners as well as people who already use visualization or personal-development practices.</p></div></div>
+      <div class="q reveal"><button onclick="toggleFaq(this)"><span>How much time should I dedicate each day?</span><span class="plus">+</span></button><div class="a"><p>This depends on the course, but most practices can be completed within approximately 10–30 minutes.</p></div></div>
+      <div class="q reveal"><button onclick="toggleFaq(this)"><span>Are the courses self-paced?</span><span class="plus">+</span></button><div class="a"><p>Some Vyrelora programs are self-paced, while others may include live sessions or scheduled group support. The format is explained on each course page.</p></div></div>
+      <div class="q reveal"><button onclick="toggleFaq(this)"><span>Can I access the course on my phone?</span><span class="plus">+</span></button><div class="a"><p>Yes. Vyrelora courses are designed to be accessible from compatible phones, tablets, and computers.</p></div></div>
+      <div class="q reveal"><button onclick="toggleFaq(this)"><span>Are the courses available internationally?</span><span class="plus">+</span></button><div class="a"><p>Yes, digital courses can generally be accessed internationally where the platform and payment provider are available.</p></div></div>
+      <div class="q reveal"><button onclick="toggleFaq(this)"><span>Can I receive a refund?</span><span class="plus">+</span></button><div class="a"><p>Refund eligibility depends on the policy for the specific course. Review the refund terms shown before completing your purchase.</p></div></div>
+      <div class="q reveal"><button onclick="toggleFaq(this)"><span>Can visualization guarantee a specific outcome?</span><span class="plus">+</span></button><div class="a"><p>No course can guarantee a particular personal, professional, financial, relationship, or health outcome. Vyrelora provides educational tools for reflection, clarity, mindset, and intentional action. Individual results vary.</p></div></div>
+    </div>
+    <div class="note-strip reveal" style="max-width:780px;margin-left:auto;margin-right:auto"><b>To be confirmed:</b> access period, live sessions, private community and course languages will be added here once finalized.</div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section" style="padding-top:20px">
+  <div class="container">
+    <div class="dark-panel center reveal">
+      <div class="glow"></div>
+      <div style="position:relative;z-index:2;max-width:640px;margin:0 auto">
+        <h2>Still have a question?</h2>
+        <p class="lead" style="margin:20px auto 36px">Send a message and the Vyrelora team will respond as soon as possible.</p>
+        <a href="contact.html" class="btn btn-gold"><span>Contact Vyrelora</span><span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="foot-grid">
+    <div>
+      <a href="index.html" class="logo"><span class="name">VYRE<span>LORA</span></span><span class="by">by Alina Kulakova</span></a>
+      <p class="slogan">Your Mind. Your Future.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Alina</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="method.html">The Vyrelora Method</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Terms and Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Refund Policy</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Social</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Vyrelora by Alina Kulakova. All rights reserved.</span>
+    <span>Visualize. Believe. Become.</span>
+  </div>
+  <p class="foot-disclaimer">Vyrelora provides educational and personal-development content. It does not provide medical, psychological, legal, or financial advice. Individual results vary.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
