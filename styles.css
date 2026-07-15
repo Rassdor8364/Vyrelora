@@ -1,118 +1,277 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAQ | Vyrelora by Alina Kulakova</title>
-<meta name="description" content="Answers to common questions about Vyrelora visualization courses, the method, access, refunds and more.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css">
-</head>
-<body>
+/* ============================================================
+   VYRELORA — shared design system
+   Palette: warm ivory · dusty rose · muted lavender · deep plum · soft gold
+   ============================================================ */
+:root{
+  --ivory:#f8f4ec;
+  --ivory-2:#f1eadb;
+  --plum:#3b2a45;
+  --plum-2:#553f63;
+  --ink-soft:#7c7086;
+  --rose:#e3c8c0;
+  --rose-deep:#cfa89d;
+  --lav:#d8cde6;
+  --gold:#c3a163;
+  --gold-soft:#e8d6ae;
+  --white:#ffffff;
+  --radius:26px;
+  --shadow:0 24px 60px -24px rgba(59,42,69,.18);
+  --serif:'Cormorant Garamond',serif;
+  --sans:'Manrope',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ivory);color:var(--plum);overflow-x:hidden;line-height:1.65;opacity:0;animation:pagein .9s ease forwards}
+@keyframes pagein{to{opacity:1}}
+::selection{background:var(--gold-soft);color:var(--plum)}
 
-<nav class="site" id="nav">
-  <a href="index.html" class="logo"><span class="name">VYRE<span>LORA</span></span><span class="by">by Alina Kulakova</span></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Alina</a></li>
-    <li><a href="courses.html">Courses</a></li>
-    <li><a href="method.html">The Method</a></li>
-    <li><a href="journal.html">Journal</a></li>
-    <li><a href="faq.html" class="active">FAQ</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <a href="courses.html" class="btn btn-primary btn-sm">Start Your Journey</a>
-</nav>
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:500;line-height:1.12}
+h2{font-size:clamp(2.1rem,4.4vw,3.4rem)}
+.section{padding:104px 6vw;position:relative}
+.container{max-width:1180px;margin:0 auto;position:relative;z-index:2}
+.narrow{max-width:780px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.76rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:20px}
+.eyebrow::before{content:"";width:36px;height:1px;background:var(--gold)}
+.eyebrow.center{justify-content:center}
+.eyebrow.center::after{content:"";width:36px;height:1px;background:var(--gold)}
+.lead{color:var(--ink-soft);font-size:1.07rem;max-width:660px}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
 
-<header class="page-hero">
-  <div class="blob b-lav"></div><div class="blob b-gold" style="left:-140px"></div>
-  <div class="container">
-    <div class="eyebrow center reveal">FAQ</div>
-    <h1 class="reveal">Questions,<br><em style="color:var(--gold)">answered gently.</em></h1>
-  </div>
-</header>
+/* ---------- decorative blobs ---------- */
+.blob{position:absolute;border-radius:50%;filter:blur(72px);opacity:.5;pointer-events:none;z-index:0}
+.blob.b-gold{width:520px;height:520px;background:radial-gradient(circle,#eddcb9,transparent 65%);top:-120px;right:-140px;animation:drift 17s ease-in-out infinite alternate}
+.blob.b-lav{width:460px;height:460px;background:radial-gradient(circle,#dcd0ee,transparent 65%);bottom:-160px;left:-160px;animation:drift 21s ease-in-out infinite alternate-reverse}
+.blob.b-rose{width:400px;height:400px;background:radial-gradient(circle,#eed6ce,transparent 65%);top:32%;left:56%;animation:drift 25s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(48px,-38px) scale(1.12)}}
 
-<section class="section" style="padding-top:10px">
-  <div class="container">
-    <div class="faq">
-      <div class="q reveal"><button onclick="toggleFaq(this)"><span>What is visualization?</span><span class="plus">+</span></button><div class="a"><p>Visualization is the practice of intentionally creating a mental image of a desired experience, outcome, identity, or future. In the Vyrelora Method, visualization is combined with emotional connection, self-reflection, belief development, and intentional action.</p></div></div>
-      <div class="q reveal"><button onclick="toggleFaq(this)"><span>Is Vyrelora based only on manifestation?</span><span class="plus">+</span></button><div class="a"><p>Vyrelora focuses on visualization as a personal-development practice. The method does not suggest that thinking alone guarantees a particular result. Visualization is used to improve clarity, focus, emotional connection, confidence, and intentional behavior.</p></div></div>
-      <div class="q reveal"><button onclick="toggleFaq(this)"><span>Do I need previous experience?</span><span class="plus">+</span></button><div class="a"><p>No. Vyrelora courses are designed for beginners as well as people who already use visualization or personal-development practices.</p></div></div>
-      <div class="q reveal"><button onclick="toggleFaq(this)"><span>How much time should I dedicate each day?</span><span class="plus">+</span></button><div class="a"><p>This depends on the course, but most practices can be completed within approximately 10–30 minutes.</p></div></div>
-      <div class="q reveal"><button onclick="toggleFaq(this)"><span>Are the courses self-paced?</span><span class="plus">+</span></button><div class="a"><p>Some Vyrelora programs are self-paced, while others may include live sessions or scheduled group support. The format is explained on each course page.</p></div></div>
-      <div class="q reveal"><button onclick="toggleFaq(this)"><span>Can I access the course on my phone?</span><span class="plus">+</span></button><div class="a"><p>Yes. Vyrelora courses are designed to be accessible from compatible phones, tablets, and computers.</p></div></div>
-      <div class="q reveal"><button onclick="toggleFaq(this)"><span>Are the courses available internationally?</span><span class="plus">+</span></button><div class="a"><p>Yes, digital courses can generally be accessed internationally where the platform and payment provider are available.</p></div></div>
-      <div class="q reveal"><button onclick="toggleFaq(this)"><span>Can I receive a refund?</span><span class="plus">+</span></button><div class="a"><p>Refund eligibility depends on the policy for the specific course. Review the refund terms shown before completing your purchase.</p></div></div>
-      <div class="q reveal"><button onclick="toggleFaq(this)"><span>Can visualization guarantee a specific outcome?</span><span class="plus">+</span></button><div class="a"><p>No course can guarantee a particular personal, professional, financial, relationship, or health outcome. Vyrelora provides educational tools for reflection, clarity, mindset, and intentional action. Individual results vary.</p></div></div>
-    </div>
-    <div class="note-strip reveal" style="max-width:780px;margin-left:auto;margin-right:auto"><b>To be confirmed:</b> access period, live sessions, private community and course languages will be added here once finalized.</div>
-  </div>
-</section>
+/* ---------- nav ---------- */
+nav.site{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 5vw;transition:all .45s cubic-bezier(.4,0,.2,1)}
+nav.site.scrolled{padding:11px 5vw;background:rgba(248,244,236,.85);backdrop-filter:blur(18px);box-shadow:0 8px 32px -16px rgba(59,42,69,.15)}
+.logo{text-decoration:none;color:var(--plum);line-height:1.05;display:inline-block}
+.logo .name{font-family:var(--serif);font-size:1.42rem;letter-spacing:.3em;font-weight:600;display:block}
+.logo .name span{color:var(--gold)}
+.logo .by{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-top:2px}
+.nav-links{display:flex;gap:28px;align-items:center;list-style:none}
+.nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.88rem;font-weight:500;position:relative;transition:color .3s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--plum)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1.5px;background:var(--gold);transition:width .35s}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+@media(max-width:1080px){.nav-links{display:none}}
 
-<!-- ============ CTA ============ -->
-<section class="section" style="padding-top:20px">
-  <div class="container">
-    <div class="dark-panel center reveal">
-      <div class="glow"></div>
-      <div style="position:relative;z-index:2;max-width:640px;margin:0 auto">
-        <h2>Still have a question?</h2>
-        <p class="lead" style="margin:20px auto 36px">Send a message and the Vyrelora team will respond as soon as possible.</p>
-        <a href="contact.html" class="btn btn-gold"><span>Contact Vyrelora</span><span class="arrow">→</span></a>
-      </div>
-    </div>
-  </div>
-</section>
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 34px;border-radius:100px;font-family:var(--sans);font-weight:600;font-size:.94rem;text-decoration:none;cursor:pointer;border:0;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .35s;position:relative}
+.btn-primary{background:linear-gradient(120deg,var(--plum),var(--plum-2));color:var(--ivory);box-shadow:0 18px 40px -14px rgba(59,42,69,.45)}
+.btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 26px 52px -14px rgba(59,42,69,.5)}
+.btn-gold{background:linear-gradient(90deg,var(--gold),#d9bd85);color:#fff;box-shadow:0 18px 40px -14px rgba(195,161,99,.55)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 26px 52px -14px rgba(195,161,99,.6)}
+.btn-ghost{background:transparent;color:var(--plum);border:1.5px solid rgba(59,42,69,.22)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
+.btn .arrow{transition:transform .35s}
+.btn:hover .arrow{transform:translateX(5px)}
+.btn-sm{padding:12px 26px;font-size:.84rem}
 
-<footer class="site">
-  <div class="foot-grid">
-    <div>
-      <a href="index.html" class="logo"><span class="name">VYRE<span>LORA</span></span><span class="by">by Alina Kulakova</span></a>
-      <p class="slogan">Your Mind. Your Future.</p>
-    </div>
-    <div>
-      <h4>Explore</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Alina</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="method.html">The Vyrelora Method</a></li>
-        <li><a href="journal.html">Journal</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Legal</h4>
-      <ul>
-        <li><a href="#">Terms and Conditions</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Refund Policy</a></li>
-        <li><a href="#">Cookie Policy</a></li>
-        <li><a href="#">Disclaimer</a></li>
-        <li><a href="#">Accessibility</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Social</h4>
-      <ul>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">TikTok</a></li>
-        <li><a href="#">YouTube</a></li>
-        <li><a href="#">Facebook</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="foot-bottom">
-    <span>© 2026 Vyrelora by Alina Kulakova. All rights reserved.</span>
-    <span>Visualize. Believe. Become.</span>
-  </div>
-  <p class="foot-disclaimer">Vyrelora provides educational and personal-development content. It does not provide medical, psychological, legal, or financial advice. Individual results vary.</p>
-</footer>
+/* ---------- hero (home) ---------- */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:150px 6vw 90px;position:relative}
+#particles{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero-inner{position:relative;z-index:2;max-width:920px}
+.hero .brandmark{font-family:var(--serif);letter-spacing:.42em;font-size:clamp(1rem,2vw,1.3rem);color:var(--gold);font-weight:600;margin-bottom:8px}
+.hero .byline{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:34px}
+.hero h1{font-size:clamp(2.9rem,7.4vw,5.6rem);font-weight:500;margin:0 0 26px}
+.hero h1 .word{display:inline-block}
+.hero p.sub{font-size:clamp(1rem,1.6vw,1.18rem);color:var(--ink-soft);max-width:600px;margin:0 auto 42px}
+.hero-cta{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.hero .support-line{margin-top:46px;font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--gold);letter-spacing:.16em}
+.scroll-hint{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--ink-soft);font-size:.7rem;letter-spacing:.25em;text-transform:uppercase}
+.scroll-hint .mouse{width:24px;height:38px;border:1.5px solid var(--ink-soft);border-radius:14px;position:relative}
+.scroll-hint .mouse::after{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);width:3px;height:7px;border-radius:3px;background:var(--gold);animation:wheel 1.8s infinite}
+@keyframes wheel{0%{opacity:1;top:7px}100%{opacity:0;top:20px}}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="assets/main.js"></script>
-</body>
-</html>
+/* ---------- page hero (subpages) ---------- */
+.page-hero{padding:190px 6vw 90px;text-align:center;position:relative;overflow:hidden}
+.page-hero h1{font-size:clamp(2.6rem,5.6vw,4.4rem);font-weight:500}
+.page-hero .lead{margin:22px auto 0}
+
+/* ---------- marquee ---------- */
+.marquee{overflow:hidden;white-space:nowrap;padding:24px 0;border-top:1px solid rgba(59,42,69,.1);border-bottom:1px solid rgba(59,42,69,.1)}
+.marquee .track{display:inline-block;animation:mscroll 30s linear infinite}
+.marquee span{font-family:var(--serif);font-style:italic;font-size:1.45rem;color:var(--ink-soft);margin:0 32px}
+.marquee b{color:var(--gold);font-weight:400}
+@keyframes mscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- cards / grids ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:26px;margin-top:56px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;margin-top:56px}
+.card{background:var(--white);border-radius:var(--radius);padding:42px 34px;box-shadow:var(--shadow);position:relative;transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.card:hover{transform:translateY(-10px)}
+.card .ico{width:54px;height:54px;border-radius:18px;background:linear-gradient(140deg,var(--gold-soft),var(--rose));display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:22px}
+.card h3{font-size:1.5rem;margin-bottom:10px}
+.card p{color:var(--ink-soft);font-size:.94rem}
+.card::after{content:"";position:absolute;left:34px;right:34px;bottom:0;height:3px;border-radius:3px 3px 0 0;background:linear-gradient(90deg,var(--gold),var(--rose-deep));transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.card:hover::after{transform:scaleX(1)}
+
+/* ---------- process steps ---------- */
+.steps{display:grid;gap:0;margin-top:60px;position:relative}
+.pstep{display:grid;grid-template-columns:110px 1fr;gap:34px;padding:38px 0;border-bottom:1px solid rgba(59,42,69,.1);align-items:start}
+.pstep:last-child{border-bottom:0}
+.pstep .n{font-family:var(--serif);font-style:italic;font-size:3.2rem;color:var(--gold-soft);line-height:1}
+.pstep h3{font-size:1.7rem;margin-bottom:8px}
+.pstep p{color:var(--ink-soft);max-width:620px}
+@media(max-width:640px){.pstep{grid-template-columns:1fr;gap:8px}}
+.closing-line{margin-top:56px;font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.4vw,1.7rem);color:var(--plum);text-align:center;max-width:720px;margin-left:auto;margin-right:auto}
+.closing-line b{color:var(--gold);font-weight:500}
+
+/* ---------- course cards ---------- */
+.course-card{background:var(--white);border-radius:var(--radius);padding:48px 38px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.34,1.56,.64,1);position:relative;overflow:hidden}
+.course-card:hover{transform:translateY(-10px)}
+.course-card .num{position:absolute;top:18px;right:26px;font-family:var(--serif);font-style:italic;font-size:4rem;color:var(--ivory-2);line-height:1;z-index:0}
+.course-card h3{font-size:1.65rem;position:relative;z-index:1}
+.course-card>p{color:var(--ink-soft);font-size:.95rem;margin:14px 0 20px;position:relative;z-index:1}
+.course-card ul{list-style:none;display:grid;gap:10px;margin-bottom:30px;flex:1;position:relative;z-index:1}
+.course-card li{display:flex;gap:11px;font-size:.92rem;color:var(--ink-soft);align-items:flex-start}
+.course-card li::before{content:"✦";color:var(--gold);flex:0 0 auto}
+.course-card .btn{justify-content:center}
+.course-card.flagship{background:linear-gradient(160deg,#402e4c,#5a4468);color:var(--ivory)}
+.course-card.flagship>p,.course-card.flagship li{color:rgba(248,244,236,.75)}
+.course-card.flagship .num{color:rgba(255,255,255,.07)}
+.course-card .flag-tag{position:absolute;top:22px;left:38px;background:linear-gradient(90deg,var(--gold),#d9bd85);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:7px 18px;border-radius:100px;z-index:2}
+
+/* ---------- detail course sections (courses page) ---------- */
+.course-detail{background:var(--white);border-radius:calc(var(--radius) + 6px);padding:clamp(40px,6vw,72px);box-shadow:var(--shadow);margin-top:60px;position:relative;overflow:hidden}
+.course-detail .glowline{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--gold),var(--rose-deep),var(--lav))}
+.course-detail h2{font-size:clamp(1.9rem,3.4vw,2.7rem)}
+.course-detail .tagline{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--gold);margin:10px 0 20px}
+.course-cols{display:grid;grid-template-columns:1.2fr .8fr;gap:52px;margin-top:34px}
+@media(max-width:880px){.course-cols{grid-template-columns:1fr}}
+.checklist{list-style:none;display:grid;gap:12px}
+.checklist li{display:flex;gap:12px;color:var(--ink-soft);font-size:.95rem;align-items:flex-start}
+.checklist li::before{content:"✦";color:var(--gold);flex:0 0 auto}
+.price-box{background:var(--ivory);border-radius:22px;padding:34px 30px;text-align:center;border:1px solid rgba(195,161,99,.3)}
+.price-box .p{font-family:var(--serif);font-size:2.6rem;font-weight:600}
+.price-box .p small{font-size:.95rem;font-family:var(--sans);color:var(--ink-soft);font-weight:400}
+.price-box .note{font-size:.8rem;color:var(--ink-soft);margin:10px 0 22px}
+.tba{display:inline-block;background:var(--ivory-2);border:1px dashed rgba(195,161,99,.6);color:var(--ink-soft);border-radius:100px;padding:4px 16px;font-size:.78rem;font-weight:600;letter-spacing:.08em}
+
+/* ---------- method elements ---------- */
+.elements{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px;margin-top:56px}
+.element{background:var(--white);border-radius:var(--radius);padding:40px 30px;box-shadow:var(--shadow);text-align:center;transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.element:hover{transform:translateY(-10px) rotate(-.6deg)}
+.element .sym{font-family:var(--serif);font-style:italic;font-size:2.4rem;color:var(--gold);display:block;margin-bottom:14px}
+.element h3{font-size:1.45rem;margin-bottom:10px}
+.element p{color:var(--ink-soft);font-size:.9rem}
+
+/* ---------- formula ---------- */
+.formula{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:56px}
+.f-step{background:linear-gradient(160deg,#402e4c,#5a4468);color:var(--ivory);border-radius:var(--radius);padding:40px 28px;text-align:center;position:relative;transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.f-step:hover{transform:translateY(-8px)}
+.f-step h3{font-size:1.6rem;color:var(--gold-soft);margin-bottom:10px}
+.f-step p{font-size:.88rem;color:rgba(248,244,236,.75)}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+@media(max-width:880px){.about-grid{grid-template-columns:1fr}}
+.portrait{position:relative}
+.portrait .frame{aspect-ratio:4/5;border-radius:200px 200px var(--radius) var(--radius);background:linear-gradient(160deg,var(--lav),var(--rose) 55%,var(--gold-soft));display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:var(--shadow);position:relative}
+.portrait .frame .placeholder{font-family:var(--serif);font-style:italic;color:rgba(59,42,69,.5);font-size:1.05rem;text-align:center;padding:0 30px}
+.portrait .ring{position:absolute;inset:-16px;border:1px solid rgba(195,161,99,.5);border-radius:220px 220px 40px 40px;pointer-events:none}
+.portrait .float-card{position:absolute;bottom:26px;right:-24px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);padding:15px 22px;border-radius:18px;box-shadow:var(--shadow);font-size:.84rem;font-weight:600;animation:floaty 5s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+/* ---------- letter (about page) ---------- */
+.letter{background:var(--white);border-radius:calc(var(--radius) + 6px);padding:clamp(44px,7vw,84px);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.letter::before{content:"“";position:absolute;top:-30px;right:30px;font-family:var(--serif);font-size:16rem;color:var(--ivory-2);line-height:1;pointer-events:none}
+.letter p{margin-bottom:22px;color:var(--plum);font-size:1.05rem;position:relative;z-index:1}
+.letter p.em{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--gold)}
+.letter .sig{font-family:var(--serif);font-style:italic;font-size:1.7rem;color:var(--plum);margin-top:34px}
+.letter .sig small{display:block;font-family:var(--sans);font-style:normal;font-size:.8rem;color:var(--ink-soft);letter-spacing:.2em;text-transform:uppercase;margin-top:6px}
+
+/* ---------- who for / not for ---------- */
+.who-box{background:var(--white);border-radius:var(--radius);padding:46px 40px;box-shadow:var(--shadow)}
+.who-box h3{font-size:1.6rem;margin-bottom:22px}
+.disclaimer{background:var(--ivory-2);border:1px solid rgba(59,42,69,.12);border-radius:var(--radius);padding:36px 38px;color:var(--ink-soft);font-size:.93rem}
+.disclaimer b{color:var(--plum)}
+
+/* ---------- stories (testimonials placeholder) ---------- */
+.story-card{background:var(--white);border-radius:var(--radius);padding:44px 36px;box-shadow:var(--shadow);position:relative;transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.story-card:hover{transform:translateY(-8px)}
+.story-card .mark{font-family:var(--serif);font-size:4.4rem;line-height:.6;color:var(--gold-soft);display:block;margin-bottom:18px}
+.story-card p{font-family:var(--serif);font-style:italic;font-size:1.14rem;line-height:1.5;color:var(--ink-soft)}
+.story-card .soon{display:inline-block;margin-top:22px;background:var(--ivory-2);border:1px dashed rgba(195,161,99,.6);color:var(--ink-soft);border-radius:100px;padding:6px 18px;font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+
+/* ---------- journal ---------- */
+.cats{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:34px}
+.cat{background:var(--white);border:1px solid rgba(59,42,69,.12);border-radius:100px;padding:9px 20px;font-size:.82rem;font-weight:600;color:var(--ink-soft);transition:all .3s;cursor:default}
+.cat:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.article{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .45s cubic-bezier(.34,1.56,.64,1);display:flex;flex-direction:column;text-decoration:none;color:var(--plum)}
+.article:hover{transform:translateY(-10px)}
+.article .thumb{height:170px;display:flex;align-items:center;justify-content:center;font-size:2.6rem;position:relative;overflow:hidden}
+.article .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(59,42,69,.12))}
+.article .body{padding:28px 28px 30px;display:flex;flex-direction:column;flex:1}
+.article .cat-tag{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
+.article h3{font-size:1.3rem;line-height:1.25;margin-bottom:10px}
+.article p{color:var(--ink-soft);font-size:.88rem;flex:1}
+.article .read{margin-top:18px;font-size:.82rem;font-weight:700;color:var(--plum)}
+.t1{background:linear-gradient(150deg,#f0e3ca,#e6d0b4)}
+.t2{background:linear-gradient(150deg,#e2d8f0,#cdc0e4)}
+.t3{background:linear-gradient(150deg,#efdad2,#e2c2b6)}
+.t4{background:linear-gradient(150deg,#dfe8dc,#c9dcc6)}
+.t5{background:linear-gradient(150deg,#e8dfd2,#d8c8b2)}
+
+/* ---------- faq ---------- */
+.faq{max-width:780px;margin:56px auto 0}
+.q{background:var(--white);border-radius:20px;margin-bottom:14px;box-shadow:0 10px 30px -18px rgba(59,42,69,.15);overflow:hidden}
+.q button{width:100%;background:none;border:0;padding:26px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px;cursor:pointer;font-family:var(--sans);font-size:1.02rem;font-weight:600;color:var(--plum);text-align:left}
+.q .plus{flex:0 0 30px;height:30px;border-radius:50%;border:1.5px solid rgba(59,42,69,.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--gold);transition:transform .4s,background .4s}
+.q.open .plus{transform:rotate(45deg);background:var(--gold);color:#fff;border-color:var(--gold)}
+.q .a{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.4,0,.2,1)}
+.q .a p{padding:0 30px 26px;color:var(--ink-soft);font-size:.95rem}
+
+/* ---------- forms / dark panel ---------- */
+.dark-panel{background:linear-gradient(160deg,#402e4c,#5a4468);border-radius:calc(var(--radius) + 8px);padding:clamp(44px,7vw,88px);color:var(--ivory);position:relative;overflow:hidden}
+.dark-panel .glow{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(195,161,99,.35),transparent 65%);filter:blur(40px);top:-140px;right:-100px;animation:drift 14s ease-in-out infinite alternate}
+.dark-panel h2{color:var(--ivory)}
+.dark-panel .lead{color:rgba(248,244,236,.72)}
+.panel-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;position:relative;z-index:2}
+@media(max-width:880px){.panel-grid{grid-template-columns:1fr}}
+form{display:grid;gap:16px}
+.field{display:grid;gap:7px}
+.field label{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(248,244,236,.6);font-weight:600}
+.field input,.field select,.field textarea{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:15px 18px;color:var(--ivory);font-family:var(--sans);font-size:.96rem;transition:border .3s,background .3s;width:100%;resize:vertical}
+.field select option{color:var(--plum)}
+.field input::placeholder,.field textarea::placeholder{color:rgba(248,244,236,.4)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.13)}
+.form-msg{display:none;background:rgba(195,161,99,.18);border:1px solid rgba(195,161,99,.5);border-radius:14px;padding:16px 20px;font-size:.92rem}
+.consent{font-size:.75rem;color:rgba(248,244,236,.55)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:640px){.field-row{grid-template-columns:1fr}}
+.guide-list{list-style:none;display:grid;gap:12px;margin-top:26px}
+.guide-list li{display:flex;gap:12px;color:rgba(248,244,236,.8);font-size:.94rem;align-items:flex-start}
+.guide-list li::before{content:"✦";color:var(--gold-soft);flex:0 0 auto}
+
+/* ---------- newsletter ---------- */
+.newsletter{max-width:640px;margin:0 auto;text-align:center}
+.newsletter form{grid-template-columns:1fr auto;display:grid;gap:12px;margin-top:34px}
+@media(max-width:560px){.newsletter form{grid-template-columns:1fr}}
+.newsletter input{background:var(--white);border:1px solid rgba(59,42,69,.15);border-radius:100px;padding:16px 26px;font-family:var(--sans);font-size:.95rem;color:var(--plum)}
+.newsletter input:focus{outline:none;border-color:var(--gold)}
+.newsletter .form-msg{color:var(--plum);border-color:var(--gold);background:rgba(195,161,99,.14)}
+
+/* ---------- footer ---------- */
+footer.site{background:var(--plum);color:rgba(248,244,236,.75);padding:80px 6vw 40px;margin-top:40px}
+.foot-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px}
+@media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
+.foot-grid .logo .name{color:var(--ivory)}
+.foot-grid .logo .by{color:rgba(248,244,236,.5)}
+.foot-grid .slogan{font-family:var(--serif);font-style:italic;color:var(--gold-soft);margin-top:16px;font-size:1.05rem}
+.foot-grid h4{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:18px;font-weight:600}
+.foot-grid ul{list-style:none;display:grid;gap:10px}
+.foot-grid a{color:rgba(248,244,236,.7);text-decoration:none;font-size:.9rem;transition:color .3s}
+.foot-grid a:hover{color:var(--gold-soft)}
+.foot-bottom{max-width:1180px;margin:56px auto 0;padding-top:28px;border-top:1px solid rgba(248,244,236,.14);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.78rem;color:rgba(248,244,236,.5)}
+.foot-disclaimer{max-width:1180px;margin:22px auto 0;font-size:.74rem;color:rgba(248,244,236,.4);line-height:1.6}
+
+/* ---------- helpers ---------- */
+.reveal{opacity:0;transform:translateY(46px)}
+.note-strip{background:var(--ivory-2);border:1px dashed rgba(195,161,99,.55);border-radius:18px;padding:18px 26px;font-size:.85rem;color:var(--ink-soft);margin-top:34px}
+.note-strip b{color:var(--gold)}
