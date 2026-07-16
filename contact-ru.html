@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты | Vyrelora</title>
+<meta name="description" content="Вопрос о курсе, аккаунте, партнёрстве или сообществе Vyrelora? Напиши нам.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site" id="nav">
+  <a href="index-ru.html" class="logo"><span class="name">VYRE<span>LORA</span></span><span class="by">by Alina Kulakova</span></a>
+  <ul class="nav-links">
+    <li><a href="index-ru.html">Главная</a></li>
+    <li><a href="about-ru.html">Об Алине</a></li>
+    <li><a href="courses-ru.html">Курсы</a></li>
+    <li><a href="method-ru.html">Метод</a></li>
+    <li><a href="journal-ru.html">Журнал</a></li>
+    <li><a href="faq-ru.html">Вопросы</a></li>
+    <li><a href="contact-ru.html" class="active">Контакты</a></li>
+  </ul>
+  <div style="display:flex;gap:12px;align-items:center"><a class="lang-sw" href="contact.html">EN</a><a href="courses-ru.html" class="btn btn-primary btn-sm">Начни свой путь</a></div>
+</nav>
+
+<header class="page-hero">
+  <div class="blob b-gold"></div><div class="blob b-rose" style="left:-120px"></div>
+  <div class="container">
+    <div class="eyebrow center reveal">Контакты</div>
+    <h1 class="reveal">Свяжись с <em style="color:var(--gold)">Vyrelora.</em></h1>
+    <p class="lead reveal">Вопрос о курсе, аккаунте, партнёрстве или сообществе Vyrelora? Отправь сообщение — команда ответит как можно быстрее.</p>
+  </div>
+</header>
+
+<!-- ============ CONTACT FORM ============ -->
+<section class="section" style="padding-top:20px">
+  <div class="container">
+    <div class="dark-panel reveal">
+      <div class="glow"></div>
+      <div class="panel-grid">
+        <div>
+          <div class="eyebrow" style="color:var(--gold-soft)">Напиши нам</div>
+          <h2>Мы читаем каждое сообщение.</h2>
+          <p class="lead" style="margin-top:20px">Вопрос о курсе, техническая проблема или идея партнёрства — это самый быстрый способ связаться с командой.</p>
+          <ul class="guide-list" style="margin-top:34px">
+            <li>Общие вопросы и курсы — hello@vyrelora.com</li>
+            <li>Поддержка и оплата — support@vyrelora.com</li>
+            <li>Партнёрства и медиа — alina@vyrelora.com</li>
+          </ul>
+          <p class="consent" style="margin-top:26px">Указанные адреса — планируемые рабочие почты, они заработают вместе с доменом.</p>
+        </div>
+        <form onsubmit="return fakeSubmit(event,'contact-msg')">
+          <div class="field-row">
+            <div class="field"><label>Имя</label><input type="text" required placeholder="Имя"></div>
+            <div class="field"><label>Фамилия</label><input type="text" required placeholder="Фамилия"></div>
+          </div>
+          <div class="field"><label>Email</label><input type="email" required placeholder="you@email.com"></div>
+          <div class="field"><label>Телефон (необязательно)</label><input type="tel" placeholder="+1 ..."></div>
+          <div class="field"><label>Тема</label>
+            <select>
+              <option>Вопрос о курсе</option>
+              <option>Техническая поддержка</option>
+              <option>Оплата</option>
+              <option>Партнёрство</option>
+              <option>Запрос от медиа</option>
+              <option>Выступление или мероприятие</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <div class="field"><label>Сообщение</label><textarea rows="5" required placeholder="Чем помочь?"></textarea></div>
+          <button type="submit" class="btn btn-gold" style="justify-content:center"><span>Отправить сообщение</span><span class="arrow">→</span></button>
+          <div class="form-msg" id="contact-msg">✨ Спасибо! Сообщение получено.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERSHIP ============ -->
+<section class="section" style="padding-top:20px">
+  <div class="blob b-lav" style="top:10%;left:-180px"></div>
+  <div class="container narrow center">
+    <div class="eyebrow center reveal">Партнёрства</div>
+    <h2 class="reveal">Сотрудничество с Vyrelora</h2>
+    <p class="lead reveal" style="margin-top:22px">Vyrelora открыта к избранным партнёрствам с авторами, wellness-брендами, платформами личного развития, организаторами мероприятий и близкими по духу сообществами.</p>
+    <p class="lead reveal" style="margin-top:14px">По вопросам партнёрства, медиа, коллабораций и выступлений используй форму выше или пиши на почту для партнёрств.</p>
+  </div>
+</section>
+
+<!-- ============ SOCIAL ============ -->
+<section class="section" style="padding-top:0">
+  <div class="container narrow center">
+    <div class="eyebrow center reveal">Продолжай путь</div>
+    <h2 class="reveal">Подписывайся на Алину и Vyrelora</h2>
+    <p class="lead reveal" style="margin-top:20px">Ежедневные промпты визуализации, практики будущего «я», личные заметки и новости курсов.</p>
+    <div class="reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:36px">
+      <a href="#" class="btn btn-ghost btn-sm">Instagram</a>
+      <a href="#" class="btn btn-ghost btn-sm">TikTok</a>
+      <a href="#" class="btn btn-ghost btn-sm">YouTube</a>
+      <a href="#" class="btn btn-ghost btn-sm">Facebook</a>
+      <a href="#" class="btn btn-ghost btn-sm">Pinterest</a>
+      <a href="#" class="btn btn-ghost btn-sm">Telegram</a>
+    </div>
+    <div class="note-strip reveal" style="text-align:left"><b>Добавим:</b> реальные ссылки на соцсети, когда Алина пришлёт свои аккаунты.</div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="foot-grid">
+    <div>
+      <a href="index-ru.html" class="logo"><span class="name">VYRE<span>LORA</span></span><span class="by">by Alina Kulakova</span></a>
+      <p class="slogan">Твой разум. Твоё будущее.</p>
+    </div>
+    <div>
+      <h4>Разделы</h4>
+      <ul>
+        <li><a href="index-ru.html">Главная</a></li>
+        <li><a href="about-ru.html">Об Алине</a></li>
+        <li><a href="courses-ru.html">Курсы</a></li>
+        <li><a href="method-ru.html">Метод Vyrelora</a></li>
+        <li><a href="journal-ru.html">Журнал</a></li>
+        <li><a href="faq-ru.html">Вопросы</a></li>
+        <li><a href="contact-ru.html">Контакты</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Документы</h4>
+      <ul>
+        <li><a href="#">Условия использования</a></li>
+        <li><a href="#">Политика конфиденциальности</a></li>
+        <li><a href="#">Политика возвратов</a></li>
+        <li><a href="#">Политика cookie</a></li>
+        <li><a href="#">Дисклеймер</a></li>
+        <li><a href="#">Доступность</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Соцсети</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Vyrelora · Алина Кулакова. Все права защищены.</span>
+    <span>Визуализируй. Верь. Становись.</span>
+  </div>
+  <p class="foot-disclaimer">Vyrelora предоставляет образовательный контент для личного развития. Это не медицинские, психологические, юридические или финансовые рекомендации. Результаты индивидуальны.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
